@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Plant</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+           
+            theme: {
+                extend: {
+                    fontFamily: {
+                        worksans: ['Roboto','Sans']
+                    }
+                },
+            },
+            plugins: [],
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+    <section class="w-[100%]  bg-[url('images/banner.png')] bg-cover bg-center md:pb-[120px] pb-[40px]">
+        <div class=" w-[100%] ">
+            <div class="max-w-[1170px] mx-auto">
+                <div class="grid sm:grid-cols-3 grid-cols-3 md:justify-between md:items-center">
+                    <div class="p-[10px] text-left flex items-center order-[1]">
+                        <img src="images/tabler_plant-2.svg" class="w-[25px] md:w-[45px]" alt="Logo" title="Logo" />
+                        <h3 class="text-white text-bold md:text-[32px] text-[17px] font-worksans">Daunku</h3>
+                    </div>
+                    <!-- mobile menu -->
+                    <button data-collapse-toggle="navbar-default" type="button" class="md:hidden order-[3]"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars" onclick="handleMenu()"></i>
+                    </button>
+                    <div class="sm:hidden fixed h-[100vh]  duration-1000   bg-[url('images/banner.png')] p-[20px] top-[0] left-[-100%] w-[90%] z-20  "
+                        id="navbar-default">
+                        <div class=" justify-between flex items-center mb-[20px] ">
+                            <div class="flex">
+                                <img src="images/tabler_plant-2.svg" class="w-[25px] md:w-[45px]" alt="Logo"
+                                    title="Logo" />
+                                <h3 class="text-white text-bold md:text-[32px] text-[17px] font-worksans">Daunku</h3>
+                            </div>
+                            <span
+                                class="bg-[#fff] w-[25px] h-[25px] text-[20px] rounded-full leading-[25px] text-center font-bold "
+                                onclick="closeMneu()">&times;</span>
+                        </div>
+                        <ul class="flex md:items-center md:justify-between md:flex-row flex-col order-[2]">
+                            <li class="text-[#22E3AD] text-[20px] font-worksans"><a href="#">Home</a></li>
+                            <li class="text-white text-[20px] font-worksans"><a href="#">Shop</a></li>
+                            <li class="text-white text-[20px] font-worksans"><a href="#">About Us</a></li>
+                            <li class="text-white text-[20px] font-worksans"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- dektop menu -->
+                 
+                    <div class=" hidden w-full md:block md:w-auto order-[2]">
+                        <ul class="flex md:items-center md:justify-between md:flex-row flex-col">
+                            <li class="text-[#22E3AD] text-[24px] font-worksans"><a href="#">Home</a></li>
+                            <li class="text-white text-[24px] font-worksans"><a href="#">Shop</a></li>
+                            <li class="text-white text-[24px] font-worksans"><a href="#">About Us</a></li>
+                            <li class="text-white text-[24px] font-worksans"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:p-[10px] pr-[20px] text-right flex justify-end md:order-[3] order-[2] relative ">
+                        <img src="images/shopping.svg" alt="Shopping" title="shopping"
+                            class="relative text-right md:w-[32px] w-[22px]" />
+                        <div class="absolute md:top-[12px] md:right-[0px] top-[10px] right-[12px]"><img
+                                src="images/Ellipse 5.png" class="relative md:w-[100%] w-[16px]" />
+                            <h6
+                                class="absolute top-[0px] left-[5px] text-[#2D3949] text-[11px] md:text-[14px] font-bold">
+                                1</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center md:p-[0px] p-[15px]">
+                    <h2
+                        class="text-white text-center md:text-[82px] text-[35px] md:mt-[70px] md:leading-[85px] leading-[50px] mt-[40px]font-worksans">
+                        Bring Serenity to Your Place
+                        With Interior Plants</h2>
+                    <p class="text-white text-[24px] md:my-[20px] font-worksans my-[10px]">find your dream plant for you home
+                        decoration with us, and we will make it happen.</p>
+                </div>
+                <div class="relative text-center md:my-[50px] my-[10px] md:w-[450px] w-[100%] mx-auto ">
+                    <input type="text" placeholder="Search Plant"
+                        class="border border-1 border-[white] focus:outline-none bg-[#5D6674] text-[20px] text-[#fff] md:h-[70px] md:w-[450px] w-[80%] rounded-full h-[50px] md:p-[20px] p-[10px] bg-{rgba(255, 255, 255, 0.20)}" />
+                    <div class="absolute md:right-[17px] md:top-[10px] top-[6px] right-[12%]">
+                        <img src="images/Ellipse 1.svg" class="md:w-[100%] w-[40px]" />
+                        <img src="images/majesticons_search-line.svg"
+                            class="absolute md:left-[10px] md:top-[10px] top-[7px] left-[6px] " />
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="w-[100%]   md:pt-[100px]  pb-[20px] pt-[30px] md:px-[0px] px-[20px]">
+        <div class="max-w-[1170px] mx-auto">
+            <div class="grid md:grid-cols-3 grid-cols-1">
+                <div class="flex items-center md:mb-[0px] mb-[20px]">
+                    <img src="images/credit-card.svg" class="md:w-[84px] w-[50px]" />
+                    <div class="ms:ml-[10px] ml-[4px]">
+                        <h3 class="text-[#081323] md:text-[32px] text-[20px]">Free Shipping</h3>
+                        <p class="text-[#828282] text-[14px] md:text-[20px] ">No Charge for each delievery</p>
+                    </div>
+                </div>
+                <div class="flex items-center md:mb-[0px] mb-[20px]">
+                    <img src="images/credit-card.svg" class="md:w-[84px] w-[50px]" />
+                    <div class="ms:ml-[10px] ml-[4px]">
+                        <h3 class="text-[#081323] md:text-[32px] text-[20px] font-worksans">Free Shipping</h3>
+                        <p class="text-[#828282] text-[14px] md:text-[20px] font-worksans ">No Charge for each delievery</p>
+                    </div>
+                </div>
+                <div class="flex items-center md:mb-[0px] mb-[20px]">
+                    <img src="images/credit-card.svg" class="md:w-[84px] w-[50px]" />
+                    <div class="ms:ml-[10px] ml-[4px]">
+                        <h3 class="text-[#081323] md:text-[32px] text-[20px]">Free Shipping</h3>
+                        <p class="text-[#828282] text-[14px] md:text-[20px] ">No Charge for each delievery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-[100%] md:pt-[200px] py-[30px]  md:pb-[40px] pb-[20px] md:px-[0px] px-[20px]">
+        <div class="max-w-[1170px] mx-auto">
+            <div class="grid md:grid-cols-[25%_auto]  grid-cols-1 ">
+                <div class="md:pt-[50px] pt-[20px]">
+                    <h4 class="text-[#081323] text-[25px] md:text-[50px] leading-tight font-medium font-worksans">Best Seller Product
+                    </h4>
+                    <p class="flex items-center text-[#4F4F4F] text-[15px] md:text-[24px] font-medium">See all
+                        collection<img src="images/bi_arrow-right-short.svg" /></p>
+                </div>
+                <div class="grid md:grid-cols-[33%_33%_33%] grid-cols-1 md:mr-[20px] mr-[0px] md:pt-[0px] pt-[200px]">
+                    <div class=" bg-[#C1D0E4] rounded-t-[40px] md:mr-[20px] mr-[0px] md:mb-[0px] mb-[100px]">
+                        <div class="md:h-[200px] h-[180px] relative">
+                            <img src="images/camille-plant-terracotta-pot-home-decor-object 1.png"
+                                class="absolute md:top-[-120px] top-[-180px]" />
+                        </div>
+                        <div class="bg-[#fff] rounded-t-[40px] h-[300px] md:mt-[50px] mt-[20px] md:p-[30px] p-[15px]">
+                            <h3 class="md:text-[32px] text-[20px] text-[#081323] text-center">Camilla</h3>
+                            <div class="flex justify-center">
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                            </div>
+                            <div class="flex justify-between md:mt-[40px] mt-[15px] items-center">
+                                <p class="md:text-[32px] text-[20px] text-[#081323]">$65.00</p>
+                                <img src="images/akar-icons_circle-plus-fill.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" bg-[#C1D0E4] rounded-t-[40px]  md:mr-[20px] mr-[0px] md:mb-[0px] mb-[100px]">
+                        <div class="md:h-[200px]  h-[180px] relative">
+                            <img src="images/camille-plant-terracotta-pot-home-decor-object 1.png"
+                                class="absolute md:top-[-120px] top-[-180px]" />
+                        </div>
+                        <div class="bg-[#fff] rounded-t-[40px] h-[300px] md:mt-[50px] mt-[20px] md:p-[30px] p-[15px]">
+                            <h3 class="md:text-[32px] text-[20px] text-[#081323] text-center">Camilla</h3>
+                            <div class="flex justify-center">
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                            </div>
+                            <div class="flex justify-between md:mt-[40px] mt-[15px] items-center">
+                                <p class="md:text-[32px] text-[20px] text-[#081323]">$65.00</p>
+                                <img src="images/akar-icons_circle-plus-fill.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" bg-[#C1D0E4] rounded-t-[40px] md:mr-[20px] mr-[0px] ">
+                        <div class="md:h-[200px]  h-[180px] relative">
+                            <img src="images/camille-plant-terracotta-pot-home-decor-object 1.png"
+                                class="absolute md:top-[-120px] top-[-180px]" />
+                        </div>
+                        <div class="bg-[#fff] rounded-t-[40px] h-[300px] md:mt-[50px] mt-[20px] md:p-[30px] p-[15px]">
+                            <h3 class="md:text-[32px] text-[20px] font-worksans text-[#081323] text-center">Camilla</h3>
+                            <div class="flex justify-center">
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                                <img src="images/ant-design_star-filled.svg" alt="start" title="star" />
+                            </div>
+                            <div class="flex justify-between md:mt-[40px] mt-[15px] items-center">
+                                <p class="md:text-[32px] text-[20px] text-[#081323]">$65.00</p>
+                                <img src="images/akar-icons_circle-plus-fill.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-[100%] md:p-[0px] p-[20px] ">
+        <div class="max-w-[1170px] mx-auto">
+            <h3 class="text-[#081323] md:text-[64px] text-[24px] font-medium text-center font-worksans">Interior Plant Reference</h3>
+            <p class="text-[#4F4F4F] md:text-[24px] text-[17px] text-center font-normal md:mb-[70px] mb-[10px] font-worksans">make
+                your home so comfortable with refreshing plants</p>
+            <div class="grid md:grid-cols-2 grid-cols-1">
+                <div class="mb-[20px] mr-[20px]">
+                    <img src="images/high-angle-desk-arrangement-with-plants.png" class="mb-[20px]" />
+
+                    <img src="images/high-angle-desk-arrangement-with-plants.png" />
+                </div>
+                <div class="h-[640px]">
+                    <img src="images/unsplash_MBsReSZ2WNM.png" class="h-[100%] w-[100%]" />
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="w-[100%] md:py-[100px] py-[20px] md:px-[0px] px-[20px]">
+        <div class="max-w-[1170px] mx-auto">
+            <div class="grid md:grid-cols-2 grid-cols-1 ">
+                <div class="md:order-1 order-2 ">
+                    <h3
+                        class="md:leading-[60px] leading-[50px]  text-[#081323] md:text-[64px] text-[24px] font-medium md:text-left text-center font-worksans">
+                        How to care for plants</h3>
+                    <p
+                        class="text-[#4F4F4F] md:text-[24px] text-[17px] md:my-[25px] my-[5px]  font-normal md:text-left text-center font-worksans">
+                        Take care of plants with all your heart</p>
+                    <div class="md:py-[30px] py-[15px]">
+                        <div class="flex items-center">
+                            <img src="images/icon-park-outline_sun.svg" />
+                            <div class="ml-[10px]">
+                                <h3 class="text-[#000] md:text-[32px] text-[20px] font-medium">Adjust Lighting</h3>
+                                <p class="text-[#4F4F4F] md:text-[20px] text-[16px]   font-normal">When caring for
+                                    indoor plants, make sure the room temperature is neither too cold nor too hot</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:py-[30px] py-[15px]">
+                        <div class="flex items-center">
+                            <img src="images/akar-icons_circle-plus-fill.svg" />
+                            <div class="ml-[10px]">
+                                <h3 class="text-[#000] md:text-[32px] text-[20px] font-medium">Adjust Lighting</h3>
+                                <p class="text-[#4F4F4F] md:text-[20px] text-[16px]   font-normal">When caring for
+                                    indoor plants, make sure the room temperature is neither too cold nor too hot</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:py-[30px] py-[15px]">
+                        <div class="flex items-center">
+                            <img src="images/charm_plant-pot.svg" />
+                            <div class="ml-[10px]">
+                                <h3 class="text-[#000] md:text-[32px] text-[20px] font-medium">Adjust Lighting</h3>
+                                <p class="text-[#4F4F4F] md:text-[20px] text-[16px]   font-normal">When caring for
+                                    indoor plants, make sure the room temperature is neither too cold nor too hot</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:py-[30px] py-[15px]">
+                        <div class="flex items-center">
+                            <img src="images/tabler_temperature.svg" />
+                            <div class="ml-[10px]">
+                                <h3 class="text-[#000] md:text-[32px] text-[20px] font-medium">Adjust Lighting</h3>
+                                <p class="text-[#4F4F4F] md:text-[20px] text-[16px]   font-normal">When caring for
+                                    indoor plants, make sure the room temperature is neither too cold nor too hot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:order-2 order-1 md:pt-[60px] pt-[20px] ">
+                    <img src="images/unsplash_MBsReSZ2WNM.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section start here -->
+    <section class="w-[100%] md:pt-[60px] py-[20px] bg-gradient-to-b from-[#566270] to-[#283444] md:px-[0px] px-[20px]">
+        <div class="max-w-[1170px] mx-auto">
+            <div
+                class="grid md:grid-cols-[35%_15%_15%_15%_20%] grid-cols-1  border-b border-[#fff] md:pb-[60px] pb-[30px]">
+
+                <div>
+                    <h3 class="md:text-[48px] text-[20px] text-[#fff] font-medium md:mb-[20px] mb-[15px] font-worksans">NewLetter</h3>
+                    <div class="relative ">
+                        <input type="text" placeholder="Enter Your Email"
+                            class="border md:w-[80%] w-[100%] border-1 border-[white] focus:outline-none bg-[#5D6674] text-[20px] text-[#fff] md:h-[70px] rounded-full h-[50px] md:p-[20px] p-[10px] bg-{rgba(255, 255, 255, 0.20)}" />
+
+
+                        <div class="absolute md:right-[100px] md:top-[15px] top-[6px] right-[3%]">
+                            <button
+                                class="bg-gradient-to-b from-[#2AF598] to-[#009EFD] text-[#fff] md:text-[16px] text-[16px] rounded-full md:p-[10px] p-[6px]">Subscribe</button>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <h3
+                        class="md:text-[24px] text-[18px] text-[#fff] font-bold md:mb-[20px] mb-[10px] md:mt-[0px] mt-[20px] font-worksans">
+                        Support</h3>
+                    <ul>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">About Us</a>
+                        </li>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Careers</a>
+                        </li>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        class="md:text-[24px] text-[18px] text-[#fff] font-bold md:mb-[20px] mb-[10px] md:mt-[0px] mt-[20px]">
+                        Usefull Link</h3>
+                    <ul>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Payments</a>
+                        </li>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Terms &
+                                Conditions</a></li>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        class="md:text-[24px] text-[18px] text-[#fff] font-bold md:mb-[20px] mb-[10px] md:mt-[0px] mt-[20px]">
+                        Our Menu</h3>
+                    <ul>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Best
+                                Product</a></li>
+                        <li class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]"><a href="">Category</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        class="md:text-[24px] text-[18px] text-[#fff] font-bold md:mb-[20px] mb-[10px] md:mt-[0px] mt-[20px]">
+                        Address</h3>
+
+                    <p class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]">JL. Setiabudhi No. 193
+                        Sukasari, Bandung
+                        West Java, Indonesia</p>
+
+                    <p class="md:text-[16px] text-[14px] text-[#fff] font-medium mb-[10px]">hallo@daunku.com</p>
+
+                </div>
+
+
+            </div>
+            <p class="md:text-[16px] text-[14px] text-[#fff] font-medium text-center md:pt-[20px] pt-[10px]">&copy; 2022
+                Daunku - All rights reserved.</p>
+        </div>
+    </section>
+    <!-- Footer Section ends here -->
+</body>
+<script>
+    let subNavbar = document.querySelector("#navbar-default")
+    let handleMenu = () => {
+     
+            subNavbar.classList.add("left-[0%]")
+           
+     
+        }
+
+
+    let closeMneu = () => {
+        subNavbar.classList.remove("left-[0%]")
+    }
+</script>
+
+</html>
